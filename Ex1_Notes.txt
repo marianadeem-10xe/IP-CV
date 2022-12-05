@@ -1,0 +1,77 @@
+original image:
+
+minimum:       0 
+maximum:       255 
+mean:          133.22 
+standard dev.: 64.3 
+
+---------------------
+
+flag= 1,  q =1
+
+quantised image:
+
+minimum:       64 
+maximum:       192 
+mean:          122.07 
+standard dev.: 63.72 
+
+---------------------
+
+flag= 1,  q =3
+
+quantised image:
+minimum:       16 
+maximum:       240 
+mean:          134.18 
+standard dev.: 63.57
+
+----------------------
+
+flag= 1,  q =6
+
+minimum:       2 
+maximum:       254 
+mean:          133.73 
+standard dev.: 64.29
+
+-----------------------
+############################
+############################
+-----------------------
+
+flag= 2,  q =1
+
+minimum:       64 
+maximum:       192 
+mean:          117.55 
+standard dev.: 63.14 
+
+-----------------------
+flag= 2,  q =3
+
+minimum:       16 
+maximum:       240 
+mean:          128.97 
+standard dev.: 64.61 
+
+-----------------------
+flag= 2,  q =6
+
+minimum:       2 
+maximum:       254 
+mean:          133.46 
+standard dev.: 64.3 
+
+###############################################
+Notes:
+
+falg 1: Quantization
+
+- d is the number of gray levels which are going to be mapped to a single value after quantization.
+- As q increases, d decreases i.e more grey levels are visible and image looks closer to the original one.
+
+falg 2: Quantization with noise
+
+- Why is noise more visile in with lower q values?  
+
