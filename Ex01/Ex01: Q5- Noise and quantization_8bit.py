@@ -14,7 +14,7 @@ def analyse_grey_values(img):
 def quantisation(q, img):
     
     """ Quantize and image
-        q: number of bits used to represent a value
+        q: number of bits used to represent a value/
         in the output image """
     
     d = 2**(8-q) 
@@ -41,8 +41,8 @@ def quantisation_with_noise(q, img):
     return img.astype("uint8")
 
 def convert(img, q):
-  img1 = np.uint8(np.round((np.float32(img.copy())/255)*((2**q)-1)))
-
+  img1 = np.uint8((np.float32(img.copy())/255)*((2**q)-1))
+#   print(np.unique(img1))
   return img1 
 
 ###################################################################################
@@ -67,9 +67,10 @@ files can hold tens of thousands of shades — ranging from pure black to white,
 and every shade of gray in between."""
 
 #  ---- Step1: read input image (pgm format P5) ----
-path = "boat.pgm"
+path = "./Ex01/boat.pgm"
 pgm_img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
 img_h, img_w = pgm_img.shape[0], pgm_img.shape[1]
+
 # print(pgm_img.shape)
 
 print("number of bits to represent quantised value:  ")
@@ -121,5 +122,5 @@ print("standard dev.: {} \n\n".format(round(lst[3],2)))
 # ---- write output image (pgm format P5) ---- 
 filename = "quantised_image_flag{}_q{}.pgm".format(flag, q)
 cv2.imwrite(filename, out, (cv2.IMWRITE_PXM_BINARY, 0))
-# cv2.imwrite("img1.pgm", img1, (cv2.IMWRITE_PXM_BINARY, 0))
+# cv2.imwrite("quantised_image_flag{}_q{}.pgm".format(flag, q), img1)
 ##########################################################################

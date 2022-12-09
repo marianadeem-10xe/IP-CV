@@ -7,20 +7,20 @@ standard dev.: 64.3
 
 ---------------------
 
-flag= 1,  q =1
+flag= 1,  q =1				normalized img: 7 bits		normalized img + 64 
 
-quantised image:
+quantised image:  129 levels
 
-minimum:       64 
-maximum:       192 
-mean:          122.07 
-standard dev.: 63.72 
+minimum:       64 			0				64
+maximum:       192 			127				191
+mean:          122.07 			65.86				129.86
+standard dev.: 63.72 			32.15				32.15
 
 ---------------------
 
 flag= 1,  q =3
 
-quantised image:
+quantised image: 224 levels
 minimum:       16 
 maximum:       240 
 mean:          134.18 
@@ -28,9 +28,9 @@ standard dev.: 63.57
 
 ----------------------
 
-flag= 1,  q =6
+flag= 1,  q =6					
 
-minimum:       2 
+minimum:       2 			
 maximum:       254 
 mean:          133.73 
 standard dev.: 64.29
@@ -40,12 +40,12 @@ standard dev.: 64.29
 ############################
 -----------------------
 
-flag= 2,  q =1
+flag= 2,  q =1					
 
-minimum:       64 
-maximum:       192 
-mean:          117.55 
-standard dev.: 63.14 
+minimum:       64 				
+maximum:       192 				
+mean:          117.55 				
+standard dev.: 63.14 				
 
 -----------------------
 flag= 2,  q =3
@@ -74,4 +74,5 @@ falg 1: Quantization
 falg 2: Quantization with noise
 
 - Why is noise more visile in with lower q values?  
+
 
