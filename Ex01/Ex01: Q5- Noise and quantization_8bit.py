@@ -36,7 +36,7 @@ def quantisation_with_noise(q, img):
     imheight, imwidth = img.shape[0], img.shape[1]
     for x in range(imwidth):
         for y in range(imheight):
-            noise = np.round(np.random.uniform(-0.5,0.5),2)
+            noise = np.round(np.random.uniform(-0.5,0.5),2) # should be 1 to generate one random sample
             img[y,x] = (np.floor((img[y,x]/d)+noise) + 0.5)*d   
     return img.astype("uint8")
 
