@@ -49,9 +49,9 @@ def plot_dft_grayscale(path):
     img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     plt.set_cmap("gray")
 
-    ft = np.fft.ifftshift(img)
+    ft = np.fft.fftshift(img)
     ft = np.fft.fft2(ft)
-    ft = np.fft.fftshift(ft)
+    ft = np.fft.ifftshift(ft)
 
     plt.subplot(121)
     plt.imshow(img)
@@ -74,7 +74,7 @@ gaussian = gaussian_2D(peak = 1,std_x=50,std_y=50,theta =0)
 sin_grating = sinusoidal_grating(wavelength,theta, amplitude, phase)
 cos_grating = cosine_grating(wavelength,theta)
 # plot_DFT(gaussian)
-plot_DFT(sin_grating)
+# plot_DFT(sin_grating)
 # plot_DFT(cos_grating)
 
-# plot_dft_grayscale("./DFT/bird_150x200.jpeg")
+plot_dft_grayscale("./Ex03/bird_150x200.jpeg")
